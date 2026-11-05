@@ -10,6 +10,8 @@ if {[file exists work]} {
 vlib work
 vmap work work
 
+vlog ../../src/type_pkg.sv
+
 vlog ../../src/*.sv
 vlog ../../tb/*.sv
 

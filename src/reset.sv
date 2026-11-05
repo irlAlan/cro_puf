@@ -9,11 +9,15 @@ module reset(
     output wire reset
 );
 
+logic reset_n;
+logic led_n;
 
 always @(posedge clk) begin
-   led   <= ~btn;
-   reset <= ~btn; 
+   led_n   <= ~btn;
+   reset_n <= ~btn; 
 end
 
+assign led = led_n;
+assign reset = reset_n;
 
 endmodule

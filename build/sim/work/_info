@@ -8,49 +8,167 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/alans/Projects/Verilog/cro_puf/build/sim
-vtb_top
+vbtn_debounce
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1793916195
+Z2 DXx4 work 8 type_pkg 0 22 FHg7XLOjiX1h:6JNo6D=M1
+Z3 !s110 1793920157
 !i10b 1
-!s100 Q_>kE9TcAW]j@f_]emNL>2
-Ib^0oMk^Xa0G[7z67j]ZMf0
-Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s100 J4NBZEA>V3b];ImLOWCPY2
+IeC;]4EHgE9V;=ZELgcl3g3
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+!s105 btn_debounce_sv_unit
+S1
+R0
+w1793919294
+8../../src/btn_debounce.sv
+F../../src/btn_debounce.sv
+L0 3
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1793920157.000000
+Z7 !s107 ../../src/type_pkg.sv|../../src/sevenseg.sv|../../src/ro_count.sv|../../src/reset.sv|../../src/btn_debounce.sv|../../src/Top.sv|
+Z8 !s90 -reportprogress|300|../../src/Top.sv|../../src/btn_debounce.sv|../../src/reset.sv|../../src/ro_count.sv|../../src/sevenseg.sv|../../src/type_pkg.sv|
+!i113 1
+Z9 tCvgOpt 0
+vreset
+R1
+R3
+!i10b 1
+!s100 BbF<6Z=RO?ATfoB4UDf@c3
+Ioz4NC4D6UE6d4eB6ZD8lC3
+R4
+!s105 reset_sv_unit
+S1
+R0
+w1793919665
+8../../src/reset.sv
+F../../src/reset.sv
+L0 5
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R9
+vro_count
+R1
+R3
+!i10b 1
+!s100 ;5>6SlP2A>1B3IaTd2O[30
+Imn=NNDAE[c<V]Pzcj]RFT1
+R4
+!s105 ro_count_sv_unit
+S1
+R0
+w1793919639
+8../../src/ro_count.sv
+F../../src/ro_count.sv
+L0 4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R9
+vseg_display
+R1
+R2
+R3
+!i10b 1
+!s100 ?MLMnhIH1oQVAQlkj9Nme3
+IX6:Ohl]K2o=GY?VD>emze3
+R4
+!s105 sevenseg_sv_unit
+S1
+R0
+w1793919839
+8../../src/sevenseg.sv
+F../../src/sevenseg.sv
+L0 5
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R9
+vtb_top
+R1
+!s110 1793920158
+!i10b 1
+!s100 >8C@zA]iG7W2YBE4hiciS2
+IHml3N5nddQJd6oP7gZl;10
+R4
 !s105 tb_top_sv_unit
 S1
 R0
-w1793915875
+w1793919064
 8../../tb/tb_top.sv
 F../../tb/tb_top.sv
 L0 3
-Z4 OV;L;10.5b;63
+R5
 r1
 !s85 0
 31
-Z5 !s108 1793916195.000000
+!s108 1793920158.000000
 !s107 ../../tb/tb_top.sv|
 !s90 -reportprogress|300|../../tb/tb_top.sv|
 !i113 1
-Z6 tCvgOpt 0
-vtop
+R9
+vTop
 R1
 R2
-!i10b 1
-!s100 TaeEQTce6HkHZFJ^>R5Nz2
-I@JVc:E8IYNieDgiAn<S=e2
 R3
-!s105 main_sv_unit
+!i10b 1
+!s100 7]hVWV2GoP<HI594zD4?<2
+In83Y4zPEPKW31kTQCoAbe3
+R4
+!s105 Top_sv_unit
 S1
 R0
-w1793900194
-8../../src/main.sv
-F../../src/main.sv
-L0 1
-R4
+w1793920138
+8../../src/Top.sv
+F../../src/Top.sv
+L0 4
+R5
 r1
 !s85 0
 31
-R5
-!s107 ../../src/main.sv|
-!s90 -reportprogress|300|../../src/main.sv|
-!i113 1
 R6
+R7
+R8
+!i113 1
+R9
+n@top
+Xtype_pkg
+R1
+R3
+!i10b 1
+!s100 CJV2>=J>bdC;:gkPMT91E0
+IFHg7XLOjiX1h:6JNo6D=M1
+VFHg7XLOjiX1h:6JNo6D=M1
+S1
+R0
+w1775434881
+8../../src/type_pkg.sv
+F../../src/type_pkg.sv
+L0 3
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R9

@@ -1,6 +1,6 @@
 `default_nettype none
 
-module btn_debounce
+module btn_debounce(
     input wire clk,
     input type_pkg::Btn_t btn_in,
     output logic led,
@@ -10,19 +10,19 @@ module btn_debounce
     // clock cycle @ 100MHz = 10ns so for ms 10^6 = 10ms
     localparam integer COUNTER = 1e6;
     // gets the number of bits to represent Btn
-    localparam integer N = $bits(type_pkg::Btn);
+    localparam integer N = $bits(type_pkg::Btn_t);
     logic [$clog2(COUNTER)-1:0] btn_count [N] = '{default: '0};
 
     logic led_s;
     
     // 2 flip flop synchro
-    type_pkg::Btn sync0, sync1;
+    type_pkg::Btn_t sync0, sync1;
     always_ff @(posedge clk) begin
         sync0 <= btn_in;
         sync1 <= sync0;
     end
     
-    type_pkg::Btn btn_reg = '0;
+    type_pkg::Btn_t btn_reg = '0;
     
     always_ff @(posedge clk) begin
         for (int i = 0; i < N; i++) begin

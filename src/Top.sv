@@ -23,11 +23,14 @@ module Top (
 logic [4:0] ro;
 
 logic rst;
-integer ro_amount = 1;
+logic [4:0] ro_amount;
 
 type_pkg::Btn_t btn;
 type_pkg::Btn_t dbtn;
 type_pkg::Seg_t sseg;
+
+logic deb_led;
+logic rst_led;
 
 assign btn.c = btnC;
 assign btn.u = btnU;
@@ -35,9 +38,12 @@ assign btn.d = btnD;
 assign btn.l = btnL;
 assign btn.r = btnR;
 
-assign sseg.an = an;
-assign sseg.seg = seg;
-assign sseg.bp = bp;
+assign an = sseg.an;
+assign seg = sseg.seg;
+assign bp = sseg.bp;
+
+assign led[0] = rst_led;
+assign led[1] = deb_led;
 
 
 // First 5 switches (From L-R) control how many RO's to use
@@ -48,9 +54,9 @@ assign sseg.bp = bp;
 
 btn_debounce btn_debounce_inst(
     .clk(sysclk),
-    .in_btn(btn),
+    .btn_in(btn),
     .led(led[0]),
-    .deb_btn(dbtn)
+    .btn_out(dbtn)
 );
 
 reset reset_inst(
@@ -66,7 +72,7 @@ ro_count ro_count_inst(
     .count(ro_amount)
 );
 
-sseg_display eg_display_inst(
+seg_display seg_display_inst(
     .clk(sysclk),
     .ro_count(ro_amount),
     .sseg(sseg)
@@ -77,5 +83,6 @@ sseg_display eg_display_inst(
 //    .ro_count(ro_amount),
 //    .ro_sig(ro)
 //);
+
 
 endmodule

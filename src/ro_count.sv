@@ -4,16 +4,12 @@
 module ro_count( 
     input logic clk,
     input logic [4:0] sw,
-    output integer num_ros
-)
-
-
-int num_ros;
+    output logic [4:0] count
+);
 
 always_ff @( posedge clk ) begin 
-    num_ros <= sw;
+    count <= sw;
 end
 
-count <= num_ros;
 
 endmodule

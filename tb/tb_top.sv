@@ -37,4 +37,28 @@ initial clk = 0;
 
 always #5 clk = ~clk;
 
+initial begin
+    switch = 16'h0000;
+
+    C_btn = 0;
+    L_btn = 0;
+    D_btn = 0;
+    U_btn = 0;
+    R_btn = 0;
+
+    #100;
+
+    switch[15:11] = 5'd10;
+
+    #100;
+
+    C_btn = 1;
+    #20;
+    C_btn = 0;
+
+    #1000;
+
+    $finish;
+end
+
 endmodule
