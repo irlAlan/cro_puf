@@ -1,4 +1,4 @@
-# #!/usr/bin/env python3
+#!/c/Users/alans/AppData/Local/Programs/Python/Python314/python
 
 import subprocess
 import sys
