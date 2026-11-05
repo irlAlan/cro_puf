@@ -1,0 +1,23 @@
+# Build outputs
+build/
+dep/
+
+# ModelSim
+transcript
+vsim.wlf
+modelsim.ini
+work/
+
+# Quartus
+db/
+incremental_db/
+output_files/
+
+# Generated files
+*.log
+*.jou
+*.str
+
+# Editors
+.vscode/
+.idea/
